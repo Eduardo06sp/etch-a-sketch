@@ -13,10 +13,11 @@ function createGrid(gridHeight = 16, gridWidth = 16) {
 
     container.appendChild(row);
   }
+
+  container.addEventListener('mouseover', colorCell);
 }
 
 createGrid();
-container.addEventListener('mouseover', colorCell);
 
 function colorCell(e) {
   cell = e.target;
