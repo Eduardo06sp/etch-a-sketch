@@ -12,7 +12,11 @@ header {
 }
 
 main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   height: 90%;
+  justify-content: center;
 }
 
 .container {
@@ -35,6 +39,10 @@ main {
 
 .black-cell {
   background-color: black;
+}
+
+.modal {
+  position: absolute;
 }
 
 @media (orientation: portrait) {
