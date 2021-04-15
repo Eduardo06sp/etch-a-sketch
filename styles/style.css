@@ -32,3 +32,10 @@ main {
   border: 1px solid black;
   height: 100%;
 }
+
+@media (orientation: portrait) {
+  .container {
+    height: 85vw;
+    width: 85vw;
+  }
+}
