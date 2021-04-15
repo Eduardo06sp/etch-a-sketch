@@ -42,7 +42,12 @@ main {
 }
 
 .modal {
+  display: none;
   position: absolute;
+}
+
+.modal-visible {
+  display: flex;
 }
 
 @media (orientation: portrait) {
