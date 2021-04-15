@@ -16,3 +16,9 @@ function createGrid(gridHeight = 16, gridWidth = 16) {
 }
 
 createGrid();
+container.addEventListener('mouseover', colorCell);
+
+function colorCell(e) {
+  cell = e.target;
+  cell.style.backgroundColor = 'black';
+}
