@@ -22,3 +22,14 @@ function colorCell(e) {
   cell = e.target;
   cell.classList.add('black-cell');
 }
+
+const clearGridButton = document.querySelector('.clear-grid');
+clearGridButton.addEventListener('click', clearGrid);
+
+modal = document.querySelector('.modal');
+function clearGrid() {
+  container.innerHTML = '';
+  modal.classList.add('modal-visible');
+
+  container.removeEventListener('mouseover', colorCell);
+}
