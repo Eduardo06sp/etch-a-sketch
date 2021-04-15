@@ -33,6 +33,10 @@ main {
   height: 100%;
 }
 
+.black-cell {
+  background-color: black;
+}
+
 @media (orientation: portrait) {
   .container {
     height: 85vw;

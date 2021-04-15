@@ -20,5 +20,5 @@ container.addEventListener('mouseover', colorCell);
 
 function colorCell(e) {
   cell = e.target;
-  cell.style.backgroundColor = 'black';
+  cell.classList.add('black-cell');
 }
