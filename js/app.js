@@ -34,3 +34,15 @@ function clearGrid() {
 
   container.removeEventListener('mouseover', colorCell);
 }
+
+const newGridButton = document.querySelector('.new-grid');
+const numberInput = document.querySelector('.grid-size');
+
+newGridButton.addEventListener('click', newGrid);
+
+function newGrid() {
+  let gridSize = parseInt(numberInput.value);
+
+  createGrid(gridSize, gridSize);
+  modal.classList.remove('modal-visible');
+}
