@@ -41,8 +41,13 @@ const numberInput = document.querySelector('.grid-size');
 newGridButton.addEventListener('click', newGrid);
 
 function newGrid() {
-  let gridSize = parseInt(numberInput.value);
+  let validateInput = numberInput.checkValidity();
 
-  createGrid(gridSize, gridSize);
-  modal.classList.remove('modal-visible');
+  if (validateInput) {
+    let gridSize = parseInt(numberInput.value);
+
+    createGrid(gridSize, gridSize);
+    modal.classList.remove('modal-visible');
+  } else {
+  }
 }
