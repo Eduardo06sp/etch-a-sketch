@@ -1,4 +1,12 @@
 const container = document.querySelector('.container');
+const clearGridButton = document.querySelector('.clear-grid');
+const newGridButton = document.querySelector('.new-grid');
+const numberInput = document.querySelector('.grid-size');
+const modal = document.querySelector('.modal');
+
+clearGridButton.addEventListener('click', clearGrid);
+newGridButton.addEventListener('click', newGrid);
+createGrid();
 
 function createGrid(gridHeight = 16, gridWidth = 16) {
   for (i = 0; i < gridHeight; i++) {
@@ -17,17 +25,13 @@ function createGrid(gridHeight = 16, gridWidth = 16) {
   container.addEventListener('mouseover', colorCell);
 }
 
-createGrid();
 
 function colorCell(e) {
   cell = e.target;
   cell.classList.add('black-cell');
 }
 
-const clearGridButton = document.querySelector('.clear-grid');
-clearGridButton.addEventListener('click', clearGrid);
 
-modal = document.querySelector('.modal');
 function clearGrid() {
   container.innerHTML = '';
   modal.classList.add('modal-visible');
@@ -35,10 +39,7 @@ function clearGrid() {
   container.removeEventListener('mouseover', colorCell);
 }
 
-const newGridButton = document.querySelector('.new-grid');
-const numberInput = document.querySelector('.grid-size');
 
-newGridButton.addEventListener('click', newGrid);
 
 function newGrid() {
   let validateInput = numberInput.checkValidity();
@@ -48,6 +49,5 @@ function newGrid() {
 
     createGrid(gridSize, gridSize);
     modal.classList.remove('modal-visible');
-  } else {
   }
 }
